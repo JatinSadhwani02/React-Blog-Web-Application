@@ -23,20 +23,22 @@ export default function Login() {
   },[])
 
 
-  const validateUser = (e)=>{
+   const validateUser = (e)=>{
     e.preventDefault()
+    let flag = false
     console.log(users)
     for(var i=0; i<users.length; i++){
       if (users[i].email === email && users[i].password === password){
         localStorage.setItem("user",JSON.stringify(users[i]));
-        navigate('/blogs')
+        flag=true
       }
       
     }
-    console.log("hello")
+    if (flag === true)
+      navigate('/blogs')
+    else
+      alert("Invalid Credentials")
     
-    
-
   }
 
   return (
