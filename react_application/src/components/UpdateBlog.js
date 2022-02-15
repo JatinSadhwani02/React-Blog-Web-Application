@@ -25,7 +25,7 @@ export default function UpdateBlog() {
             description: desc,
             userEmail : email
         }).then((resp)=>{
-            alert("Data Updated Successfully")
+            alert("Blog Updated Successfully")
             navigate("/blogs")
         }).catch((err)=>{
             console.log(err)
