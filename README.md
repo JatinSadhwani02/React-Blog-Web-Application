@@ -8,4 +8,4 @@ Run json servers for blogs and users
 
 Blogs => json-server --watch src/database/blogs.json --port 3001
 
-Users => json-server --watch src/database/blogs.json --port 3333
+Users => json-server --watch src/database/users.json --port 3333
